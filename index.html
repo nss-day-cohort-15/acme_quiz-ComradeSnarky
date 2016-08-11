@@ -3,26 +3,33 @@
 <head>
   <title>Baby, You're a Firework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/quizzes/acme_quiz/acme_quiz-ComradeSnarky/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div class="container-fluid">
 <h2>FIREWORKS</h2>
-  <select class="dropdown">
-    <option><a href="#">Action</a></option>
-    <option><a href="#">Another action</a></option>
-    <option><a href="#">Something else here</a></option>
-    <option><a href="#">Separated link</a></option>
-  </select>
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
 </div>
 <div class="row">
   <div class="col-md-6 col-md-6">col-md-6 col-md-6</div>
   <div class="col-md-6 col-md-6">col-md-6 col-md-6</div>
   <div class="col-md-6 col-md-6">col-md-6 col-md-6</div>
+  <div class="col-md-6 col-md-6">col-md-6 col-md-6</div>
 </div>
 </div>
-  <script src="/quizzes/acme_quiz/acme_quiz-ComradeSnarky/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/quizzes/acme_quiz/acme_quiz-ComradeSnarky/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

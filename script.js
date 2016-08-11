@@ -1,30 +1,53 @@
+// This function does one thing, and returns a promise
+var firstAJAX = function() {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: "catagories.json"
+    }).done(function(data) {
+      resolve(data);
+    }).fail(function(xhr, status, error) {
+      reject(error);
+    });
+  })
+};
 
-// // Promise principle #2: Promise `.then`s can be chained
+// This function does one thing, and returns a promise
+var secondAJAX = function(result_of_firstXHR) {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: "types.json",
+      data: result_of_firstXHR
+    }).done(function(data) {
+      resolve(data);
+    }).fail(function(xhr, status, error) {
+      reject(error);
+    });
+  })
+};
 
-// getJSON('catagories.json')
-//   .then(function () {
-//     console.log('`.then` #1 will fire first')
-//   })
-//   .then(function (catagory) {
-//     console.log('`.then` #2 will fire second')
-//   })
+// This function does one thing, and returns a promise
+var thirdAJAX = function(result_of_secondXHR) {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: "products.json",
+      data: result_of_secondXHR
+    }).done(function(data) {
+      resolve(data);
+    }).fail(function(xhr, status, error) {
+      reject(error);
+    });
+  })
+};
 
-// // The return value of the first then becomes the argument to the second then
 
-// getJSON('types.json')
-//   .then(function (arg) {
-//     console.log("`.then` #1's argument contains the return value of the promise:", arg)
-//     return 'Hello #2 from #1'
-//   })
-//   .then(function (arg) {
-//     console.log("`.then` #2's argument contains the return value of the first `.then`:", arg)
-//   })
+//use above Promises to describe the order of execution,
 
-// getJSON('products.json')
-//   .then(function (arg) {
-//     console.log("`.then` #1's argument contains the return value of the promise:", arg)
-//     return 'Hello #2 from #1'
-//   })
-//   .then(function (arg) {
-//     console.log("`.then` #2's argument contains the return value of the first `.then`:", arg)
-//   })
+firstAJAX()
+  .then(function(data1) {
+    return secondAJAX(data1);
+  })
+  .then(function(data2) {
+    return thirdAJAX(data2);
+  }).then(function(data3){
+    console.log(data3);
+  });
