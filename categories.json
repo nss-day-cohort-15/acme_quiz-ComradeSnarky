@@ -1,0 +1,18 @@
+{
+    "categories": [
+        {
+            "id": 0,
+            "name": "Fireworks"
+        },
+        {
+            "id": 1,
+            "name": "Demolition"
+        },
+        {
+            "id": 2,
+            "name": "Arguments"
+        }
+    ]
+}
+
+
