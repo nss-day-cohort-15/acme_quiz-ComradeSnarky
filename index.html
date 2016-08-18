@@ -3,16 +3,32 @@
 <head>
   <title>Baby, You're a Firework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="container-fluid">
-<h2>FIREWORKS</h2>
-  <select id="category"></select>
-<div class="row" id="content"></div>
-  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Categories
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" data-toggle="dropdown" aria-labelledby="dropdownMenu1">
+      <li><a href="#">Fireworks</a></li>
+      <li><a href="#">Demolition</a></li>
+      <li><a href="#">Arguments</a></li>
+    </ul>
+<!--   <div class="col-xs-12" style="height:50px;"></div>
+  <div class="col-xs-12" style="height:50px;"></div> -->
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="row" id="row">
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  </div>
+</div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="javascripts/promise.js"></script>
 </body>
 </html>
