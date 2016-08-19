@@ -23,7 +23,7 @@ $(document).ready(function() {
     return new Promise((resolve, reject) => {
       $.ajax({
         url: "jsons/types.json",
-        // data: result_of_firstXHR
+        // data: result_of_promise1
       }).done(function(data){
         resolve(data);
       }).fail(function(xhr, status, error){
@@ -36,7 +36,7 @@ $(document).ready(function() {
     return new Promise((resolve, reject) => {
       $.ajax({
         url: "jsons/products.json",
-        // data: result_of_secondXHR
+        // data: result_of_promise2
       }).done(function(data){
         resolve(data);
       }).fail(function(xhr, status, error){
