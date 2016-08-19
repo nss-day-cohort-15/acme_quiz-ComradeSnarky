@@ -7,7 +7,7 @@ $(document).ready(function() {
   var products=[];
   var types=[];
 
-  var firstXHR = function(){
+  var promise1 = function(){
     return new Promise((resolve, reject) => {
       $.ajax({
         url: "jsons/categories.json"
@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
   };
 
-  var secondXHR = function(result_of_firstXHR){
+  var promise2 = function(result_of_firstXHR){
     return new Promise((resolve, reject) => {
       $.ajax({
         url: "jsons/types.json",
@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
   };
 
-  var thirdXHR = function(result_of_secondXHR){
+  var promise3 = function(result_of_secondXHR){
     return new Promise((resolve, reject) => {
       $.ajax({
         url: "jsons/products.json",
@@ -45,15 +45,15 @@ $(document).ready(function() {
     });
   };
 
-  firstXHR()
+  promise1()
     .then(function(data1){
       categories = data1.categories;
       populateDropdown(categories);
-      return secondXHR(data1);
+      return promise2(data1);
     })
     .then(function(data2){
       types = data2.types;
-      return thirdXHR(data2);
+      return promise3(data2);
     }).then(function(data3){
       let products1 = data3.products;
       products1.forEach(function(product){
