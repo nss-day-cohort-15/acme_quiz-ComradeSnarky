@@ -1,0 +1,46 @@
+{
+  "products": [{
+    "snakes": {
+      "id": 1,
+      "type": 0,
+      "name": "Snakes",
+      "description": "A single line of smoke forming into the shape of a snake for when there is a fireworks ban."
+    }
+  }, {
+    "bottle_rockets": {
+      "id": 2,
+      "type": 0,
+      "name": "Bottle Rockets",
+      "description": "Fire crackers on a stick.  Use them for a fun game of chicken with friends!"
+    }
+  }, {
+    "tnt": {
+      "id": 3,
+      "type": 1,
+      "name": "TNT",
+      "description": "For blowing a big hole in anything you want to destroy."
+    }
+  }, {
+    "land mine": {
+      "id": 4,
+      "type": 1,
+      "name": "Land Mine",
+      "description": "For blowing a hole in a specific direction on the ground."
+    }
+  }, {
+    "toilet seat": {
+      "id": 5,
+      "type": 2,
+      "name": "Leaving the Toilet Seat Up",
+      "description": "Classic argument for any co-habitating couple."
+    }
+  }, {
+    "dirty dishes": {
+      "id": 6,
+      "type": 2,
+      "name": "Dirty dishes in the sink",
+      "description": "The age old passive aggressive argument...who will crack first?"
+    }
+
+  }]
+}
